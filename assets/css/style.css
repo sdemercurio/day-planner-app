@@ -1,0 +1,76 @@
+body {
+    background-color: rgb(101, 109, 106);
+}
+
+.main-container {
+    display: block;
+}
+
+.planner-container {
+    display: none;
+    margin-top: 20px;
+}
+
+h1 {
+    margin-top: 50px;
+    font-family: gala-biline, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 150px;
+    color:beige;
+    padding: 50px;
+    line-height: 120px;
+    display: block;
+    
+}
+
+#enterBtn {
+    background-color:rgb(30, 35, 37);
+    font-family: inherit;
+    font-style: 1em;
+    font-family: gala-condensed, sans-serif;
+    font-weight: 300;
+    font-size: 25px;
+    font-style: normal;
+    text-align: center;
+    align-items: center;
+    display: block;
+    margin: auto;
+}
+
+p {
+    float: left;
+    margin-top: 10px;
+}
+
+#content {
+    align-items: center;
+    display: inline-block;
+    width: 800px;
+    height: 50px;
+    text-align: center;
+}
+
+#saveBtn {
+    display: inline-block;
+    /* float: right; */
+}
+
+h2 {
+    text-align: center;
+    margin-top: 20px;
+    font-family: gala-biline, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 75px;
+    color:beige;
+
+}
+
+h3 {
+    text-align: center;
+    font-family: novecento-sans, sans-serif;
+    font-weight: 100;
+    font-style: normal;
+
+}
