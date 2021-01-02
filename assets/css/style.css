@@ -9,6 +9,7 @@ body {
 .planner-container {
     display: none;
     margin-top: 20px;
+    margin-bottom: 40px;
 }
 
 h1 {
@@ -41,9 +42,16 @@ h1 {
 p {
     float: left;
     margin-top: 10px;
+    text-align: center;
+    /* background-color: lightblue; */
+    padding: 5px;
+    height: 45px;
+    width: 100px;
+    margin-bottom: -10px;
 }
 
 #content {
+    margin-left: 10px;
     align-items: center;
     display: inline-block;
     width: 800px;
@@ -53,6 +61,16 @@ p {
 
 #saveBtn {
     display: inline-block;
+    background-color:rgb(30, 35, 37);
+    color: beige;
+    font-family: inherit;
+    font-style: 1em;
+    font-family: gala-condensed, sans-serif;
+    font-weight: 200;
+    font-size: 18px;
+    height: 45px;
+    width: 60px;
+    
     /* float: right; */
 }
 
