@@ -11,6 +11,11 @@ Depending on what time it is
     than the current hour and future hours
 */
 
+//Moment
+// const m = moment();
+
+// console.log(m.toString());
+
 // Elements on home page
 $("#title").html("<h1>Most Events Are Planned</h1>");
 $("#enterBtn").append();
@@ -23,4 +28,5 @@ $('#enterBtn').on('click', function() {
     $(".main-container").hide();
     $(".planner-container").show();
 });
+
 
