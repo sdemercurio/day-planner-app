@@ -26,8 +26,8 @@ Depending on what time it is
 
 $(document).ready(function () {
     // var timeInputs = JSON.parse(localStorage.getItem('timeInputs')) || {};
-    var currentHour = moment().hours();
-    var todaysDate = moment().format("dddd, MMMM Do YYYY");
+    var currentHour = moment().hours("LT, a A");
+    var todaysDate = moment().format("MMMM-DD-YYYY");
     console.log(currentHour);
     //Create Variable with the hours.
     var timeInputs = [
@@ -43,11 +43,11 @@ $(document).ready(function () {
         { time: 17, input: "" },
     ]
     //Show Today's date on the DOM
-    function printTime() {
+    function displayDate() {
         $("#currentDay").text(todaysDate);
     }
-   
 
-    printTime();
+    
+    displayDate();
 
 });
