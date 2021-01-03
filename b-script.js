@@ -24,48 +24,29 @@ Depending on what time it is
 //     $(".planner-container").show();
 // });
 
-$(document).ready(function () {
+$(document).ready( () => {
     // var timeInputs = JSON.parse(localStorage.getItem('timeInputs')) || {};
-    var currentHour = moment().format("hh A");
+
+    var currentHour = moment().format("h A");
     var todaysDate = moment().format("MMMM-DD-YYYY");
     console.log(currentHour);
+
+    let eachHour = ["", "", "", "", "", "", "", ""];
+    let day = eachHour;
+
     
     //Create Variable with the hours.
-    var timeInputs = [
-        
-        { time: 9, input: "" },
-        { time: 10, input: "" },
-        { time: 11, input: "" },
-        { time: 12, input: "" },
-        { time: 1, input: "" },
-        { time: 2, input: "" },
-        { time: 3, input: "" },
-        { time: 4, input: "" },
-        { time: 5, input: "" },
-    ]
+   
     //Show Today's date on the DOM
     function displayDate() {
         $("#currentDay").text(todaysDate);
     }
 
-     //Show Hours on the DOM
-     function hourBlocks() {
-        for (let i = 0; i < timeInputs.length; i++) {
-            // console.log(timeInputs[i].time, timeInputs[i].input);
-            var plannerRow = $('<div class="input-group mb-3 row">');
-            var plannerRowPrepend = $('<div class="input-group-prepend" time-block>');
-            var hour = $('<span class="hour">' + timeInputs[i].time + ':00' + '</span>');
-            plannerRowPrepend.append(hour);
-            var inputEl = $('<textarea type="text" class="description form-control"></textarea>');
-            var plannerRowAppend = $('<div class="input-group-append">');
-            var saveBtn = $('<button>Save</button></span>');
-            plannerRowAppend.append(saveBtn);
-            plannerRow.append(plannerRowPrepend).append(inputEl).append(plannerRowAppend);
-            $(".container").append(plannerRow);
-        }
-    }
+     
 
-    hourBlocks();
+    
+
+    
     displayDate();
 
 });
