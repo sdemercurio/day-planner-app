@@ -24,3 +24,30 @@ Depending on what time it is
 //     $(".planner-container").show();
 // });
 
+$(document).ready(function () {
+    // var timeInputs = JSON.parse(localStorage.getItem('timeInputs')) || {};
+    var currentHour = moment().hours();
+    var todaysDate = moment().format("dddd, MMMM Do YYYY");
+    console.log(currentHour);
+    //Create Variable with the hours.
+    var timeInputs = [
+        
+        { time: 9, input: "" },
+        { time: 10, input: "" },
+        { time: 11, input: "" },
+        { time: 12, input: "" },
+        { time: 13, input: "" },
+        { time: 14, input: "" },
+        { time: 15, input: "" },
+        { time: 16, input: "" },
+        { time: 17, input: "" },
+    ]
+    //Show Today's date on the DOM
+    function printTime() {
+        $("#currentDay").text(todaysDate);
+    }
+   
+
+    printTime();
+
+});
