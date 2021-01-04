@@ -47,9 +47,9 @@ $(document).ready( () => {
 
     }
 
-    $("<div class='hour col-2'></div>").appendTo(".row");
-        $("<textarea class='description col-8'</textarea>").appendTo(".row");
-        $("<button class='saveBtn col-2'>Save</button>").appendTo(".row");
+    $("<div class='hour col-1'></div>").appendTo(".row");
+        $("<textarea class='description col-10'</textarea>").appendTo(".row");
+        $("<button class='saveBtn col-1'>Save</button>").appendTo(".row");
 
 
 
