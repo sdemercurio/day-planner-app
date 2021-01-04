@@ -40,6 +40,7 @@ $(document).ready( () => {
     const hour = moment.duration(60, "minutes");
     console.log(hour);
 
+//Append elements to DOM
     for (var i = 0; i < workHours.length; i++) {
         $("<div class='row'></div>").appendTo(".container");
         
