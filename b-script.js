@@ -30,23 +30,34 @@ $(document).ready( () => {
     var currentHour = moment().format("h A");
     var todaysDate = moment().format("MMMM-DD-YYYY");
     console.log(currentHour);
+    let hours = moment().format("h A");
 
-    let eachHour = ["", "", "", "", "", "", "", ""];
-    let day = eachHour;
+    let workHours = ["", "", "", "", "", "", "", ""];
+    let workDay = workHours
+// Today's date
+    $("#currentDay").text(todaysDate);
 
-    
-    //Create Variable with the hours.
-   
-    //Show Today's date on the DOM
-    function displayDate() {
-        $("#currentDay").text(todaysDate);
+    const hour = moment.duration(60, "minutes");
+    console.log(hour);
+
+    for (var i = 0; i < workHours.length; i++) {
+        $("<div class='row'></div>").appendTo(".container");
+        
+
     }
 
-     
+    $("<div class='hour col-2'></div>").appendTo(".row");
+        $("<textarea class='description col-8'</textarea>").appendTo(".row");
+        $("<button class='saveBtn col-2'>Save</button>").appendTo(".row");
+
+
 
     
+    
+    })
+    
+    // console.log(JSON.stringify(hours));
+
+
 
     
-    displayDate();
-
-});
