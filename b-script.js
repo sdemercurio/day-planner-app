@@ -20,17 +20,15 @@ Depending on what time it is
 
 $(document).ready( () => {
     // var timeInputs = JSON.parse(localStorage.getItem('timeInputs')) || {};
-
     var currentHour = moment().format("h A");
     var todaysDate = moment().format("MMMM-DD-YYYY");
     // console.log(currentHour);
-    
-    // console.log(currentHour);
-    
-    let hours = moment().format("h A");
 
 
-    let workHours = ["9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM"];
+    let workHours = ["9 AM", "10 AM", "11 AM", "12 PM", "1 PM", "2 PM", "3 PM", "4 PM", "5 PM"];
+
+    console.log(moment(workHours[4]).isSame(currentHour));
+    
     // let workHours = [
     //     {time: "9AM", id: "hour1"},
     //     {time: "10AM", id: "hour2"},
@@ -41,15 +39,21 @@ $(document).ready( () => {
     //     {time: "3PM", id: "hour7"},
     //     {time: "4PM", id: "hour8"},
     //     {time: "5PM", id: "hour9"},
-    // ]
+    // ];
     //Create id for each hour?
     // workHours.forEach((item, i) => {
     //     item.id = i + 1;
     // })
     // console.log(workHours);
+
+    // Today's date
+    $("#currentDay").text(todaysDate);
+
+    // const hour = moment.duration(60, "minutes");
+    // console.log(hour);
     
 
-    let workDay = workHours;
+    // let workDay = workHours;
     let startTime = moment().set({hour:9});
     let endTime = moment().set({hour:5});
 
@@ -58,17 +62,14 @@ $(document).ready( () => {
     // console.log(startTime.startOf("hour"));
     // console.log(endTime.startOf("hour"));
 
-// Today's date
-    $("#currentDay").text(todaysDate);
-
-    const hour = moment.duration(60, "minutes");
-    // console.log(hour);
-
 //Append elements to DOM
-for (let i = 0; i < workDay.length; i++) {
-    $("<div class='row'><div class='hour col-1' id='"+workDay[i]+"'>"+workDay[i]+"</div><textarea class='description col-10' placeholder= 'Type something here'></textarea><button class='saveBtn col-1'>Save</button>" 
+for (let i = 0; i < workHours.length; i++) {
+    $("<div class='row'><div class='hour col-1' id='"+ workHours[i]+"'>"+ workHours[i]+"</div><textarea class='description col-10' placeholder= 'Type something here'></textarea><button class='saveBtn col-1'>Save</button>" 
     ).appendTo(".container");
+
+
 }
+
     // for (var i = 0; i < workHours.length; i++) {
     //     $("<div class='row'></div>").appendTo(".container");
     // }
@@ -79,6 +80,8 @@ for (let i = 0; i < workDay.length; i++) {
 
 //  console.log(JSON.stringify(hours));
 //  moment(60, "m").fromNow();
+
+
     
     })
     
