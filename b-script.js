@@ -21,35 +21,36 @@ $(document).ready(() => {
 
     var TimeTracker = {
         hour: function () { return moment().hour(); },
-        timecheck: (hourArray, hour, colors) => {
+        timecheck: (hourArray, hour) => {
             let h = hour;
             let hr = hourArray;
-            let c = colors;
-            // console.log(`c = ${c} - hr = ${hr} - h = ${h}`);
+
             setInterval(() => {
-                console.log("inside setInterval: " + hr); //LOG
-                
-                hr.forEach((item) => {
-                if(h < item) {
-                    // console.log("past");
-                    $(".description").addClass(".past");
-                }else if(h > item) {
-                    //  console.log("future");
-                    $(".description").addClass(".future");
-                }else{
-                    //  console.log("present");
-                    $(".description").addClass(".present");
+
+                let mainDiv = document.getElementsByClassName('description');
+
+                for (let i = 0; i < mainDiv.length; i++) {
+                    const element = mainDiv[i];
+                    console.log(element);
+                    if (h < hr[i]) {
+                        $(element).attr("class", "description col-10 future")
+                        console.log("future: " +
+                            `current hour -> ${h} is less than event hour -> ${hr[i]}
+                            ${element.classList}`); //LOG
+                    } else if (h > hr[i]) {
+                        $(element).attr("class", "description col-10 past")
+                        console.log("past: " +
+                            `current hour -> ${h} is more than event hour -> ${hr[i]}
+                             ${element.classList}`); //LOG
+                    } else {
+                        $(element).attr("class", "description col-10 present")
+                        console.log("present: " +
+                            `current hour -> ${h} is equal to event hour -> ${hr[i]}
+                             ${element.classList}`); //LOG
+                    }
                 }
-            });
-                // hr.forEach((item, i) => {
-                //     (h > item) ? c[i] = 'green' :
-                //         c[i] = 'red';
-                // });
-                // console.log(c);
-                $(".description").attr("class");
-            }, 5000, hr, c);
+            }, 5000, hr);
         },
-        colorArray: []
     }
 
     // var timeInputs = JSON.parse(localStorage.getItem('timeInputs')) || {};
@@ -61,7 +62,6 @@ $(document).ready(() => {
     let workHours = [9, 10, 11, 12, 13, 14, 15, 16, 17];
 
     // console.log("hour compare: " + moment(workHours[4]).isSame(currentHour));
-    console.log("moment-workHours-4: " + moment(workHours[4]))
     console.log(`time-tracker-hour: ${TimeTracker.hour()}
                     - for-each begins looping here - `);
     TimeTracker.timecheck(workHours, TimeTracker.hour(), TimeTracker.colorArray);
@@ -117,8 +117,6 @@ $(document).ready(() => {
 
     //  console.log(JSON.stringify(hours));
     //  moment(60, "m").fromNow();
-
-
 
 })
 
