@@ -38,12 +38,12 @@ $(document).ready(() => {
                             `current hour -> ${h} is less than event hour -> ${hr[i]}
                             ${element.classList}`); //LOG
                     } else if (h > hr[i]) {
-                        $(element).attr("class", "description col-10 past")
+                        $(element).attr("class", "description col-10 present")
                         console.log("past: " +
                             `current hour -> ${h} is more than event hour -> ${hr[i]}
                              ${element.classList}`); //LOG
                     } else {
-                        $(element).attr("class", "description col-10 present")
+                        $(element).attr("class", "description col-10 past")
                         console.log("present: " +
                             `current hour -> ${h} is equal to event hour -> ${hr[i]}
                              ${element.classList}`); //LOG
@@ -59,12 +59,12 @@ $(document).ready(() => {
     // console.log(currentHour);
 
 
-    let workHours = [9, 10, 11, 12, 13, 14, 15, 16, 17];
+    let workHours = [16, 17, 18, 19, 20, 21, 22, 23, 24];
 
     // console.log("hour compare: " + moment(workHours[4]).isSame(currentHour));
     console.log(`time-tracker-hour: ${TimeTracker.hour()}
                     - for-each begins looping here - `);
-    TimeTracker.timecheck(workHours, TimeTracker.hour(), TimeTracker.colorArray);
+    TimeTracker.timecheck(workHours, TimeTracker.hour());
 
     // let workHours = [
     //     {time: "9AM", id: "hour1"},
