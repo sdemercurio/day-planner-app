@@ -32,13 +32,13 @@ $(document).ready(() => {
                 hr.forEach((item) => {
                 if(h < item) {
                     // console.log("past");
-                    $("description").attr("class", ".past");
+                    $(".description").addClass(".past");
                 }else if(h > item) {
                     //  console.log("future");
-                    $("description").attr("class", ".future");
+                    $(".description").addClass(".future");
                 }else{
                     //  console.log("present");
-                    $("description").attr("class", ".present");
+                    $(".description").addClass(".present");
                 }
             });
                 // hr.forEach((item, i) => {
@@ -101,7 +101,7 @@ $(document).ready(() => {
 
     //Append elements to DOM
     for (let i = 0; i < workHours.length; i++) {
-        $("<div class='row'><div class='hour col-1' id='" + workHours[i] + "'>" + workHours[i] + "</div><textarea class='description col-10' placeholder= 'Type something here'></textarea><button class='saveBtn col-1'>Save</button>"
+        $("<div class='row'><div class='hour col-1' id='" + workHours[i] + "'>" + workHours[i] + "</div><textarea class='description col-10' placeholder= 'Type something here'></textarea><button class='saveBtn col-1'><i class='far fa-save'></i></button>"
         ).appendTo(".container");
 
 
