@@ -17,18 +17,55 @@ Depending on what time it is
     than the current hour and future hours
 */
 
+$(document).ready(() => {
 
-$(document).ready( () => {
+    var TimeTracker = {
+        hour: function () { return moment().hour(); },
+        timecheck: (hourArray, hour, colors) => {
+            let h = hour;
+            let hr = hourArray;
+            let c = colors;
+            // console.log(`c = ${c} - hr = ${hr} - h = ${h}`);
+            setInterval(() => {
+                console.log("inside setInterval: " + hr); //LOG
+                
+                hr.forEach((item) => {
+                if(h < item) {
+                    // console.log("past");
+                    $("description").attr("class", ".past");
+                }else if(h > item) {
+                    //  console.log("future");
+                    $("description").attr("class", ".future");
+                }else{
+                    //  console.log("present");
+                    $("description").attr("class", ".present");
+                }
+            });
+                // hr.forEach((item, i) => {
+                //     (h > item) ? c[i] = 'green' :
+                //         c[i] = 'red';
+                // });
+                // console.log(c);
+                $(".description").attr("class");
+            }, 5000, hr, c);
+        },
+        colorArray: []
+    }
+
     // var timeInputs = JSON.parse(localStorage.getItem('timeInputs')) || {};
     var currentHour = moment().format("h A");
     var todaysDate = moment().format("MMMM-DD-YYYY");
     // console.log(currentHour);
 
 
-    let workHours = ["9 AM", "10 AM", "11 AM", "12 PM", "1 PM", "2 PM", "3 PM", "4 PM", "5 PM"];
+    let workHours = [9, 10, 11, 12, 13, 14, 15, 16, 17];
 
-    console.log(moment(workHours[4]).isSame(currentHour));
-    
+    // console.log("hour compare: " + moment(workHours[4]).isSame(currentHour));
+    console.log("moment-workHours-4: " + moment(workHours[4]))
+    console.log(`time-tracker-hour: ${TimeTracker.hour()}
+                    - for-each begins looping here - `);
+    TimeTracker.timecheck(workHours, TimeTracker.hour(), TimeTracker.colorArray);
+
     // let workHours = [
     //     {time: "9AM", id: "hour1"},
     //     {time: "10AM", id: "hour2"},
@@ -51,24 +88,24 @@ $(document).ready( () => {
 
     // const hour = moment.duration(60, "minutes");
     // console.log(hour);
-    
+
 
     // let workDay = workHours;
-    let startTime = moment().set({hour:9});
-    let endTime = moment().set({hour:5});
+    let startTime = moment().set({ hour: 9 });
+    let endTime = moment().set({ hour: 5 });
 
-    
-// startOf displays the hour at the top of the hour.
+
+    // startOf displays the hour at the top of the hour.
     // console.log(startTime.startOf("hour"));
     // console.log(endTime.startOf("hour"));
 
-//Append elements to DOM
-for (let i = 0; i < workHours.length; i++) {
-    $("<div class='row'><div class='hour col-1' id='"+ workHours[i]+"'>"+ workHours[i]+"</div><textarea class='description col-10' placeholder= 'Type something here'></textarea><button class='saveBtn col-1'>Save</button>" 
-    ).appendTo(".container");
+    //Append elements to DOM
+    for (let i = 0; i < workHours.length; i++) {
+        $("<div class='row'><div class='hour col-1' id='" + workHours[i] + "'>" + workHours[i] + "</div><textarea class='description col-10' placeholder= 'Type something here'></textarea><button class='saveBtn col-1'>Save</button>"
+        ).appendTo(".container");
 
 
-}
+    }
 
     // for (var i = 0; i < workHours.length; i++) {
     //     $("<div class='row'></div>").appendTo(".container");
@@ -78,15 +115,14 @@ for (let i = 0; i < workHours.length; i++) {
     //     $("<textarea class='description col-10' placeholder= 'Type something here'></textarea>").appendTo(".row");
     //     $("<button class='saveBtn col-1'>Save</button>").appendTo(".row");
 
-//  console.log(JSON.stringify(hours));
-//  moment(60, "m").fromNow();
-
-
-    
-    })
-    
-   
+    //  console.log(JSON.stringify(hours));
+    //  moment(60, "m").fromNow();
 
 
 
-    
+})
+
+
+
+
+
