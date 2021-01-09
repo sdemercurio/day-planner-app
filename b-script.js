@@ -24,6 +24,7 @@ $(document).ready(() => {
         timecheck: (hourArray, hour) => {
             let h = hour;
             let hr = hourArray;
+            console.log(hr);
 
             setInterval(() => {
 
@@ -54,12 +55,12 @@ $(document).ready(() => {
     }
 
     // var timeInputs = JSON.parse(localStorage.getItem('timeInputs')) || {};
-    var currentHour = moment().format("h A");
     var todaysDate = moment().format("MMMM-DD-YYYY");
     // console.log(currentHour);
 
 
-    let workHours = [16, 17, 18, 19, 20, 21, 22, 23, 24];
+    let workHours = [9, 10, 11, 12, 13, 14, 15, 16, 17];
+    let hourText = ["9 AM", "10 AM", "11 AM", "12 PM", "1 PM", "2 PM", "3 PM", "4 PM", "5 PM"];
 
     // console.log("hour compare: " + moment(workHours[4]).isSame(currentHour));
     console.log(`time-tracker-hour: ${TimeTracker.hour()}
@@ -101,11 +102,13 @@ $(document).ready(() => {
 
     //Append elements to DOM
     for (let i = 0; i < workHours.length; i++) {
-        $("<div class='row'><div class='hour col-1' id='" + workHours[i] + "'>" + workHours[i] + "</div><textarea class='description col-10' placeholder= 'Type something here'></textarea><button class='saveBtn col-1'><i class='far fa-save'></i></button>"
+        $("<div class='row'><div class='hour col-1' id='" + workHours[i] + "'>" + hourText[i] + "</div><textarea class='description col-10' placeholder= 'Type something here'></textarea><button class='saveBtn col-1'><i class='far fa-save'></i></button>"
         ).appendTo(".container");
-
-
     }
+    // for (let i = 0; i < hourText.length; i++) {
+    //     const timeEl = hourText[i];
+    //     $(".hour").html(hourText[i]);
+    // }
 
     // for (var i = 0; i < workHours.length; i++) {
     //     $("<div class='row'></div>").appendTo(".container");
