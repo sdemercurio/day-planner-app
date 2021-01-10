@@ -1,94 +1,79 @@
 body {
-    background-color: rgb(101, 109, 106);
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1;
+  padding-bottom: 50px;
 }
 
-.main-container {
-    display: block;
+textarea {
+  background: transparent;
+  border: none;
+  resize: none;
+  color: #000000;
+  border-left: 1px solid black;
+  padding: 10px;
+  text-align: center;
 }
 
-.planner-container {
-    display: none;
-    margin-top: 20px;
-    margin-bottom: 40px;
+placeholder {
+  color: rgb(145, 144, 144);
 }
 
-h1 {
-    margin-top: 50px;
-    font-family: gala-biline, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 150px;
-    color:beige;
-    padding: 50px;
-    line-height: 120px;
-    display: block;
-    
+.jumbotron {
+  text-align: center;
+  background-color: transparent;
+  color: black;
+  border-radius: 0;
+  border-bottom: 10px solid black;
 }
 
-#enterBtn {
-    background-color:rgb(30, 35, 37);
-    font-family: inherit;
-    font-style: 1em;
-    font-family: gala-condensed, sans-serif;
-    font-weight: 300;
-    font-size: 25px;
-    font-style: normal;
-    text-align: center;
-    align-items: center;
-    display: block;
-    margin: auto;
+.description {
+  white-space: pre-wrap;
 }
 
-p {
-    float: left;
-    margin-top: 10px;
-    text-align: center;
-    /* background-color: lightblue; */
-    padding: 5px;
-    height: 45px;
-    width: 100px;
-    margin-bottom: -10px;
+.time-block {
+  text-align: center;
+  border-radius: 15px;
 }
 
-#content {
-    margin-left: 10px;
-    align-items: center;
-    display: inline-block;
-    width: 800px;
-    height: 50px;
-    text-align: center;
+.row {
+  white-space: pre-wrap;
+  height: 80px;
+  border-top: 1px solid white;
 }
 
-#saveBtn {
-    display: inline-block;
-    background-color:rgb(30, 35, 37);
-    color: beige;
-    font-family: inherit;
-    font-style: 1em;
-    font-family: gala-condensed, sans-serif;
-    font-weight: 200;
-    font-size: 18px;
-    height: 45px;
-    width: 60px;
-    
-    /* float: right; */
+.hour {
+  background-color: #ffffff;
+  color: #000000;
+  border-top: 1px dashed #000000;
+  line-height: 50px;
 }
 
-h2 {
-    text-align: center;
-    margin-top: 20px;
-    font-family: gala-biline, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 75px;
-    color:beige;
-
+.past {
+  background-color: #d3d3d3;
+  color: white;
 }
 
-h3 {
-    text-align: center;
-    font-family: novecento-sans, sans-serif;
-    font-weight: 100;
-    font-style: normal;
+.present {
+  background-color: #ff6961;
+  color: white;
+}
 
+.future {
+  background-color: #77dd77;
+  color: white;
+}
+
+.saveBtn {
+  border-left: 1px solid black;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: #06aed5;
+  color: white;
+  text-align: center;
+}
+
+.saveBtn i:hover {
+  font-size: 20px;
+  transition: all 0.3s ease-in-out;
 }
