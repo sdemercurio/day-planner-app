@@ -64,23 +64,17 @@ $(document).ready(() => {
             console.log(element);
             if (h < hr[i]) {
               $(element).attr("class", "description col-10 future");
-              // console.log("future: " +
-              //     `current hour -> ${h} is less than event hour -> ${hr[i]}
-              //     ${element.classList}`); //LOG
+    
             } else if (h > hr[i]) {
               $(element).attr("class", "description col-10 past");
-              // console.log("past: " +
-              //     `current hour -> ${h} is more than event hour -> ${hr[i]}
-              //      ${element.classList}`); //LOG
+              
             } else {
               $(element).attr("class", "description col-10 present");
-              // console.log("present: " +
-              //     `current hour -> ${h} is equal to event hour -> ${hr[i]}
-              //      ${element.classList}`); //LOG
+             
             }
           }
         },
-        1000,
+        5000,
         hr
       );
     },
