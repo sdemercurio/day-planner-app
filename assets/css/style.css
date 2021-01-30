@@ -3,6 +3,19 @@ body {
   font-size: 16px;
   line-height: 1;
   padding-bottom: 50px;
+  background-color: rgb(162, 187, 178);
+}
+
+#planner-heading {
+    margin-top: 50px;
+    font-family: gala-biline, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 150px;
+    color:beige;
+    padding: 50px;
+    line-height: 120px;
+    display: block;
 }
 
 textarea {
