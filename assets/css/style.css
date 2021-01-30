@@ -6,6 +6,55 @@ body {
   background-color: rgb(162, 187, 178);
 }
 
+/* Landing Page stylses */
+
+@media screen and (max-width: 768px) {
+  h1{
+      font-size:1.5rem;
+  }
+}
+
+.main-container {
+  display: block;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 100px;
+  font-family: gala-biline, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 800%;
+  text-align: center;
+  color:beige;
+  line-height: 120px;
+  display: block;
+  
+}
+
+#enterBtn {
+  background-color:rgb(30, 35, 37);
+  font-family: inherit;
+  font-style: 1em;
+  font-family: gala-condensed, sans-serif;
+  font-weight: 300;
+  font-size: 25px;
+  font-style: normal;
+  text-align: center;
+  align-items: center;
+  display: block;
+  margin: auto;
+}
+
+
+/* Landing Page stylses */
+
+.planner-container {
+  display: none;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
 #planner-heading {
     margin-top: 50px;
     font-family: gala-biline, sans-serif;
@@ -39,7 +88,7 @@ textarea {
   background: transparent;
   border: none;
   resize: none;
-  color: #000000;
+  color: #6488a5;
   border-left: 1px solid black;
   padding: 10px;
   text-align: center;
@@ -59,6 +108,7 @@ placeholder {
 
 .description {
   white-space: pre-wrap;
+  text-align: ;
 }
 
 .time-block {
@@ -87,17 +137,17 @@ placeholder {
 
 .past {
   background-color: #d9f0df;
-  color: white;
+  color:  #6488a5;
 }
 
 .present {
   background-color: #e6b3af;
-  color: white;
+  color:  #6488a5;
 }
 
 .future {
   background-color: #b5c4a9;
-  color: white;
+  color:  #6488a5;
 }
 
 .saveBtn {
