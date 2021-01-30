@@ -56,7 +56,6 @@ h1 {
 }
 
 #planner-heading {
-    margin-top: 50px;
     font-family: gala-biline, sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -92,10 +91,6 @@ textarea {
   border-left: 1px solid black;
   padding: 10px;
   text-align: center;
-}
-
-placeholder {
-  color: rgb(145, 144, 144);
 }
 
 .jumbotron {
