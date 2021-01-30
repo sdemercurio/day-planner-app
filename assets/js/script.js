@@ -23,6 +23,16 @@ I have a button
 */
 
 $(document).ready(() => {
+
+  $("#title").html("<h1>PlanIt</h1>");
+  $("#enterBtn").append();
+  
+  
+  $('#enterBtn').on('click', function() {
+      $(".main-container").hide();
+      $(".planner-container").show();
+  });
+
   // var timeInputs = JSON.parse(localStorage.getItem('timeInputs')) || {};
   var todaysDate = moment().format("MMMM-DD-YYYY");
   // console.log(currentHour);
@@ -74,7 +84,7 @@ $(document).ready(() => {
             }
           }
         },
-        5000,
+        200,
         hr
       );
     },
