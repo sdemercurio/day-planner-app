@@ -9,6 +9,7 @@ This is a simple daily planner.
 * [Demo](#demo)
 * [Technologies](#technologies)
 * [Status](#status)
+* [Contact](#contact)
 
 ## General info.
 Upon accessing the applcation, the page will load. displaying the current date. Each hour is coded to change color depending on the time of day. Past hours are white, current hour is red, and future hours are green. The user is able to input tasks or reminders and once hitting the save button, any input will remain in the utilized space even once the page is refreshed.
@@ -57,6 +58,9 @@ THEN the saved events persist
 
 ## Status
 Project is: _in progress_
+
+## Contact
+Email: sarah.l.demercurio@gmail.com
 
 Link to deployed page: https://sdemercurio.github.io/PlanIt/
 
