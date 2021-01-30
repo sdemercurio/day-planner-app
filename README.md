@@ -1,4 +1,4 @@
-### PlanIt
+# PlanIt
 This is a simple daily planner.
 
 ## Table of contents
