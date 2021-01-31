@@ -115,7 +115,7 @@ $(document).ready(() => {
   //Append elements to DOM
   for (let i = 0; i < workHours.length; i++) {
     $(
-      "<div class='row'><div class='hour col-1'>" +
+      "<div class='row' id='hour-rows'><div class='hour col-1'>" +
         hourText[i] +
         "</div><textarea name='text' id='" +
         workHours[i] +
